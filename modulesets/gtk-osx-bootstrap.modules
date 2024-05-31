@@ -17,9 +17,6 @@
   <repository name="sourceforge"
               href="http://downloads.sourceforge.net/sourceforge/"
               type="tarball" />
-  <repository name="jpeg"
-              href="http://www.ijg.org/files/"
-              type="tarball" />
   <repository name="libtiff"
               href="http://download.osgeo.org/"
               type="tarball" />
