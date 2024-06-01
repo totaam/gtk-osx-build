@@ -17,9 +17,6 @@
   <repository name="ffmpeg"
               href="https://ffmpeg.org/releases/"
               type="tarball" />
-  <repository name="nasm"
-              href="https://www.nasm.us/pub/nasm/releasebuilds/"
-              type="tarball" />
   <repository name="github.com"
               href="https://github.com/"
               type="tarball" />
@@ -41,18 +38,6 @@
             hash="sha256:720c1dc404439e0a9117aa144dc7ead56f1658adf4badbb39f959d6ad8eed489"
             repo="github.com" />
   </autotools>
-  <!---->
-  <autotools id="nasm"
-             autogen-sh="configure">
-    <branch module="2.16.01/nasm-2.16.01.tar.xz"
-            version="2.16.01"
-            hash="sha256:c77745f4802375efeee2ec5c0ad6b7f037ea9c87c92b149a9637ff099f162558"
-            repo="nasm">
-      <patch file="nasm-2.16.01-warnings.c-needs-srcdir.patch"
-             strip="1" />
-    </branch>
-  </autotools>
-  <!---->
   <autotools id="ffmpeg"
              autogen-sh="configure"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s"
@@ -130,6 +115,16 @@
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
       <dep package="ffmpeg" />
+    </dependencies>
+  </meson>
+  <!---->
+  <meson id="gst-python">
+    <branch module="gst-python/gst-python-1.24.4.tar.xz"
+            version="1.24.4"
+            hash="sha256:5510358316eb5c965829a393714b4d88306033cd64db3eae8cc62b41ae80a392">
+    </branch>
+    <dependencies>
+      <dep package="gstreamer" />
     </dependencies>
   </meson>
   <!---->
