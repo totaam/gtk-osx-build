@@ -56,13 +56,6 @@
       <dep package="meta-gtk-osx-bootstrap" />
     </after>
   </metamodule>
-  <autotools id="libffi"
-             autogen-sh="autoreconf"
-             autogenargs="--disable-multi-os-directory --disable-docs">
-    <branch module="libffi/libffi"
-            repo="github"
-            tag="v3.4.7" />
-  </autotools>
   <autotools id="libpcre2"
              autogen-sh="configure"
              autogenargs="--enable-pcre2-16 --enable-pcre2-32 --enable-jit">
@@ -75,7 +68,6 @@
     <branch module="glib"
             tag="glib-2-83" />
     <dependencies>
-      <dep package="libffi" />
       <dep package="libpcre2" />
     </dependencies>
   </meson>

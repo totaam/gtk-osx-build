@@ -64,14 +64,6 @@
       <dep package="meta-gtk-osx-bootstrap" />
     </after>
   </metamodule>
-  <autotools id="libffi"
-             autogen-sh="configure"
-             autogenargs="--disable-multi-os-directory --disable-docs">
-    <branch module="libffi/libffi/releases/download/v3.4.7/libffi-3.4.7.tar.gz"
-            version="3.4.7"
-            hash="sha256:138607dee268bdecf374adf9144c00e839e38541f75f24a1fcf18b78fda48b2d"
-            repo="github-tarball" />
-  </autotools>
   <autotools id="libpcre2"
              autogen-sh="configure"
              autogenargs="--enable-pcre2-16 --enable-pcre2-32 --enable-jit">
@@ -87,7 +79,6 @@
             hash="sha256:4edc4dc184f46d1220694b7775c5d7c62265c83b0e9632d844da127c181fc391" >
     </branch>
     <dependencies>
-      <dep package="libffi" />
       <dep package="libpcre2" />
     </dependencies>
   </meson>

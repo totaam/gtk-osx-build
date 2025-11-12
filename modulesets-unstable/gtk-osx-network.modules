@@ -87,7 +87,6 @@
     <branch module="p11-glue/p11-kit"
             repo="github" />
     <dependencies>
-      <dep package="libffi" />
       <dep package="libtasn1" />
     </dependencies>
   </autotools>
